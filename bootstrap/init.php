@@ -2,6 +2,9 @@
 
 require __DIR__.'/autoload.php';
 
+$dotenv = new Dotenv\Dotenv(__DIR__.'/../');
+$dotenv->load();
+
 /*
 |--------------------------------------------------------------------------
 | Run The Console Application

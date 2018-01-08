@@ -7,3 +7,5 @@
 
 /builds/
 /database/database.sqlite
+
+.env

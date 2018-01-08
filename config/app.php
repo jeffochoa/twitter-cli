@@ -7,7 +7,7 @@ return [
     /*
      * Here goes the application name.
      */
-    'name' => 'Laravel Zero',
+    'name' => 'JeffOchoa - Twitter CLI',
 
     /*
      * Here goes the application version.
@@ -26,7 +26,7 @@ return [
      * If true, development commands won't be available as the app
      * will be in the production environment.
      */
-    'production' => false,
+    'production' => true,
 
     /*
      * If true, scheduler commands will be available.
@@ -39,5 +39,6 @@ return [
      */
     'providers' => [
         App\Providers\AppServiceProvider::class,
+        Toolkito\Larasap\LarasapServiceProvider::class
     ],
 ];

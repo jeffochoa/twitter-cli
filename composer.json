@@ -16,7 +16,9 @@
     ],
     "require": {
         "php": ">=7.1",
-        "laravel-zero/framework": "4.0.*"
+        "laravel-zero/framework": "4.0.*",
+        "toolkito/larasap": "^1.0",
+        "vlucas/phpdotenv": "^2.4"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
