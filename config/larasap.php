@@ -7,10 +7,10 @@ return [
         'channel_signature' => '' // This will be assigned in the footer of message
     ],
     'twitter' => [
-        'consurmer_key' => $_ENV['CONSUMER_KEY'],
-        'consurmer_secret' => $_ENV['CONSUMER_SECRET'],
-        'access_token' => $_ENV['ACCESS_TOKEN'],
-        'access_token_secret' => $_ENV['ACCESS_TOKEN_SECRET'],
+        'consurmer_key' => env('CONSUMER_KEY'),
+        'consurmer_secret' => env('CONSUMER_SECRET'),
+        'access_token' => env('ACCESS_TOKEN'),
+        'access_token_secret' => env('ACCESS_TOKEN_SECRET'),
     ],
     'facebook' => [
         'app_id' => '',
