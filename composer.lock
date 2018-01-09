@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "500096faa05cce4b2dcb1be3144c0f3b",
+    "content-hash": "c31b30111f8b90c4c078a628d2b736e8",
     "packages": [
         {
             "name": "doctrine/inflector",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462"
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/e11d84c6e018beedd929cff5220969a3c6d1d462",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/5527a48b7313d15261292c149e55e26eae771b0a",
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.2"
@@ -29,7 +29,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -71,7 +71,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2017-07-22T12:18:28+00:00"
+            "time": "2018-01-09T20:05:19+00:00"
         },
         {
             "name": "facebook/graph-sdk",
@@ -629,17 +629,51 @@
             "time": "2017-07-17T13:07:43+00:00"
         },
         {
-            "name": "laravel-zero/framework",
-            "version": "v4.0.21",
+            "name": "laravel-zero/foundation",
+            "version": "v5.5.28",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-zero/framework.git",
-                "reference": "a47557fd3835ae34fcf750a074de7b97281b3641"
+                "url": "https://github.com/laravel-zero/foundation.git",
+                "reference": "aed9fd3d3090299f28c63e54b172d477fbb76e37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/a47557fd3835ae34fcf750a074de7b97281b3641",
-                "reference": "a47557fd3835ae34fcf750a074de7b97281b3641",
+                "url": "https://api.github.com/repos/laravel-zero/foundation/zipball/aed9fd3d3090299f28c63e54b172d477fbb76e37",
+                "reference": "aed9fd3d3090299f28c63e54b172d477fbb76e37",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\": "src/Illuminate/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "This is a mirror from illuminate/foundation.",
+            "keywords": [
+                "framework",
+                "laravel"
+            ],
+            "time": "2018-01-09T19:20:28+00:00"
+        },
+        {
+            "name": "laravel-zero/framework",
+            "version": "v4.0.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-zero/framework.git",
+                "reference": "29e6053f5cf46a9eb2e57543e13fec52f930d9e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/29e6053f5cf46a9eb2e57543e13fec52f930d9e6",
+                "reference": "29e6053f5cf46a9eb2e57543e13fec52f930d9e6",
                 "shasum": ""
             },
             "require": {
@@ -649,6 +683,7 @@
                 "illuminate/container": "5.5.*",
                 "illuminate/events": "5.5.*",
                 "illuminate/filesystem": "5.5.*",
+                "laravel-zero/foundation": "5.5.*",
                 "league/flysystem": "^1.0",
                 "mtdowling/cron-expression": "^1.2",
                 "nunomaduro/collision": "1.1.*",
@@ -690,7 +725,7 @@
                 "laravel",
                 "zero"
             ],
-            "time": "2018-01-05T22:41:46+00:00"
+            "time": "2018-01-09T20:50:40+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1493,16 +1528,16 @@
         },
         {
             "name": "toolkito/larasap",
-            "version": "V1.0.1",
+            "version": "V1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/toolkito/laravel-social-auto-posting.git",
-                "reference": "8c051a09ccb6d7485f0d8b20c56119c2ad8d88d3"
+                "reference": "e16da5189a9d445e11f90bde70655b97f75a6788"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/toolkito/laravel-social-auto-posting/zipball/8c051a09ccb6d7485f0d8b20c56119c2ad8d88d3",
-                "reference": "8c051a09ccb6d7485f0d8b20c56119c2ad8d88d3",
+                "url": "https://api.github.com/repos/toolkito/laravel-social-auto-posting/zipball/e16da5189a9d445e11f90bde70655b97f75a6788",
+                "reference": "e16da5189a9d445e11f90bde70655b97f75a6788",
                 "shasum": ""
             },
             "require": {
@@ -1546,7 +1581,7 @@
                 "telegram",
                 "twitter"
             ],
-            "time": "2018-01-07T20:28:36+00:00"
+            "time": "2018-01-09T06:13:30+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
