@@ -25,7 +25,11 @@ ACCESS_TOKEN_SECRET=
 ## Have fun ##
 The tweet will be published in your twitter account.
 ```bash
-$ php twitter-cli "This is awesome"
+$ php twitter-cli tweet "This is awesome"
+```
+You can also tweet images
+```bash
+$ php twitter-cli tweet "This is awesome" path/to/img-file.jpg
 ```
 
 ## About ##

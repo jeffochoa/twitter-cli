@@ -13,7 +13,9 @@ class Tweet extends Command
      *
      * @var string
      */
-    protected $signature = 'tweet {text : The tweet string}';
+    protected $signature = 'tweet
+                                {text : The tweet string}
+                                {img=false : Image path}';
 
     /**
      * The console command description.
@@ -27,21 +29,52 @@ class Tweet extends Command
      *
      * @return mixed
      */
-    public function handle(): void
+    public function handle() : void
     {
-        $response = SendTo::Twitter($this->argument('text'));
-        $this->info("Tweet published: {$this->argument('text')}!");
+        try {
+            if (empty($this->argument('img'))) {
+                SendTo::Twitter($this->argument('text'));
+                $this->info("Tweet published: {$this->argument('text')}!");
+                return;
+            }
+            if ($this->isValidImage($this->argument('img'))) {
+                SendTo::Twitter($this->argument('text'), [$this->argument('img')]);
+                $this->info("Tweet published: {$this->argument('text')} {$this->argument('img')}!");
+                return;
+            }
+        } catch (\Throwable $e) {
+            $this->error('Oops! Something went wrong, please check the arguments.');
+        }
     }
 
     /**
-     * Define the command's schedule.
+     * Check if the given path is a valid image file
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule $schedule
-     *
-     * @return void
+     * @param string $path
+     * @return boolean
      */
-    public function schedule(Schedule $schedule): void
+    private function isValidImage($path) : bool
     {
-        // $schedule->command(static::class)->everyMinute();
+        if (empty($path)) {
+            return false;
+        }
+
+        if (!empty($path) && !file_exists($path)) {
+            $this->line('');
+            $this->error('File not found: '.$this->argument('img'));
+            $this->line('');
+            return false;
+        }
+
+        $file_parts = pathinfo($path);
+
+        if (!in_array(strtolower($file_parts['extension']), ['jpg', 'jpeg', 'png', 'gif'])) {
+            $this->line('');
+            $this->error('File not found: '.$this->argument('img'));
+            $this->line('');
+            return false;
+        }
+
+        return true;
     }
 }
